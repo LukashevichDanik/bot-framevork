@@ -1,0 +1,13 @@
+{
+  "address": {
+    "botId": "mjm2aldkbma4ld49i",
+    "channelId": "emulator",
+    "userId": "default-user",
+    "conversationId": "mhndfb027e1b",
+    "serviceUrl": "http://localhost:64187"
+  },
+  "userName": "User",
+  "isTrustedServiceUrl": true,
+  "isGroup": false,
+  "locale": "en-US"
+}
