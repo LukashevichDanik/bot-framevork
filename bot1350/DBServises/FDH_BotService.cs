@@ -62,7 +62,8 @@ namespace bot1350.DBServises
                     this.dbContext.WishLists.Add(wishItem);
                     this.dbContext.SaveChanges();
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
 
             }
@@ -74,13 +75,13 @@ namespace bot1350.DBServises
             {
                 var wishs = this.dbContext.WishLists.ToList();
                 var resultStr = "";
-                foreach(WishList wish in wishs)
+                foreach (WishList wish in wishs)
                 {
                     resultStr += $"{wish.User.UserName}: {wish.Wish}\n\n________________________\n\n";
                 }
                 return resultStr;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return "";
             }
@@ -127,6 +128,21 @@ namespace bot1350.DBServises
             catch (Exception e)
             {
                 return "";
+            }
+        }
+
+        public void AddDataToLog()
+        {
+            try
+            {
+                Log log = new Log();
+                log.ErrorMessage = "1111";
+                this.dbContext.Logs.Add(log);
+                this.dbContext.SaveChanges();
+            }
+            catch (Exception e)
+            {
+
             }
         }
     }

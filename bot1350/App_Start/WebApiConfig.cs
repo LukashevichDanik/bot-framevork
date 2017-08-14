@@ -28,10 +28,18 @@ namespace bot1350
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "Responce",
+                routeTemplate: "api/responce",
+                defaults: new { controller = "Scheduler", action = "Response" }
+            );
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            
         }
     }
 }
